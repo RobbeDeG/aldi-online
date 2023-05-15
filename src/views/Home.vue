@@ -2,7 +2,6 @@
   <div class="home">
     <Navbar></Navbar>
       <Hero/>
-      <products-list></products-list>
 
       <div class="container h-100">
         <div class="row p-5 h-100 justify-content-center align-items-center">
@@ -20,7 +19,7 @@
       </div>
       <login></login>
 
-      <mini-cart></mini-cart>
+      
 
   </div>
 </template>

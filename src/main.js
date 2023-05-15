@@ -2,6 +2,7 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 import jQuery from 'bootstrap';
+import {auth} from './firebase';
 
 window.$ = window.jQuery = jQuery;
 
@@ -15,7 +16,15 @@ Vue.component('Hero', require('./components/Hero.vue').default);
 
 Vue.config.productionTip = false;
 
-new Vue({
-  router,
-  render: (h) => h(App),
-}).$mount("#app");
+let app =''
+
+auth.onAuthStateChanged(function(user) {
+if(!app){
+  new Vue({
+    router,
+    render: (h) => h(App),
+  }).$mount("#app");
+}
+})
+
+

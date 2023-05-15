@@ -19,7 +19,7 @@
                           <span class="user-name">Robbe
                               <strong>De Geyter</strong>
                           </span>
-                          <span class="user-role"> {{email}} </span>
+                          <span class="user-role">  </span>
                           <span class="user-status">
                               <i class="fa fa-circle"></i>
                               <span>Online</span>
@@ -100,12 +100,24 @@
   <script>
   // @ is an alias to /src
   import Hero from "@/components/Hero.vue";
+  import {fb} from '../firebase'
   
   export default {
     name: "admin",
     components: {
       Hero
     },
+    methods:{
+        logout(){
+            fb.auth().signOut()
+            .then(() =>{
+                this.$router.replace('/')
+            })
+            .catch((err) => {
+                console.log(err)
+            });
+        }
+    }
   };
   </script>
   
