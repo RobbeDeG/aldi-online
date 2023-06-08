@@ -100,7 +100,7 @@
   <script>
   // @ is an alias to /src
   import Hero from "@/components/Hero.vue";
-  import {fb} from '../firebase'
+  import {fb, auth} from '../firebase'
   
   export default {
     name: "admin",
@@ -109,7 +109,7 @@
     },
     methods:{
         logout(){
-            fb.auth().signOut()
+            auth.signOut()
             .then(() =>{
                 this.$router.replace('/')
             })

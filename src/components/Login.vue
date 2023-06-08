@@ -101,15 +101,12 @@
                               var errorMessage = error.message;
                               if (errorCode === 'auth/wrong-password') {
                                   alert('Wrong password.');
-                              } else {
-                                  alert(errorMessage);
-                              }
+                              } 
                               console.log(error);
                       });
   
         },
         register(){
-
               createUserWithEmailAndPassword(auth, this.email, this.password)
                   .then((user) => {
                       $('#login').modal('hide')

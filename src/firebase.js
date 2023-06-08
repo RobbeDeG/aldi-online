@@ -23,7 +23,7 @@
 
 import * as firebase from "firebase/app";
 import { getAuth } from 'firebase/auth';
-import 'firebase/firestore';
+import { getFirestore } from 'firebase/firestore';
 import '@firebase/auth';
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
@@ -41,7 +41,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const db = firebase.firestore;
+const db = getFirestore(app);
 const auth = getAuth(app);
 const analytics = getAnalytics(app);
 

@@ -5,14 +5,13 @@
             <div class="col-md-5">
               <div class="hero-content">
                 <h1 class="hero-title">
-                  Vue Shop For Developers
+                  Leer meer over ons
                 </h1>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos numquam tempora, iure delectus totam minus quam aperiam ratione dolores magni voluptates ut necessitatibus odio ipsum fuga, voluptas ab praesentium nihil?
+                  Wij bij Aldi-Online zijn zeer gedreven om onze klanten te helpen met het vinden wat ze zoeken. Bestel vandaag voor 22:00 en ontvang het morgen in huis! Dit alles doen wij aan een zo laag mogelijke prijs. 
                 </p>
                 <div class="hero-btn mt-5">
-                    <button class="btn custom-btn btn-info mr-4">Home</button>
-                    <button class="btn custom-btn btn-outline-secondary">Producten</button>
+                  <router-link to="/about" class="btn custom-btn btn-info mr-4">Meer info over leveringen</router-link>
                 </div>
               </div>
             </div>

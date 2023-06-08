@@ -4,7 +4,10 @@ import Home from "../views/Home.vue";
 import Admin from "../views/Admin.vue";
 import Overview from "../views/Overview.vue";
 import Products from "../views/Products.vue";
+import AdminProducts from "../views/AdminProducts.vue";
 import Orders from "../views/Orders.vue";
+import About from "../views/About.vue";
+
 import {fb, auth} from "../firebase";
 
 Vue.use(VueRouter);
@@ -19,6 +22,16 @@ const router =  new VueRouter({
       component: Home
     },
     {
+        path: "/about",
+        name: "about",
+        component: About
+    },
+    {
+      path: "/products",
+      name: "products",
+      component: Products
+  },
+    {
       path: "/admin",
       name: "admin",
       component: Admin,
@@ -32,13 +45,8 @@ const router =  new VueRouter({
         {
           path: "products",
           name: "products",
-          component: Products
+          component: AdminProducts
         },
-        // {
-        //   path: "profile",
-        //   name: "profile",
-        //   component: Profile
-        // },
         {
           path: "orders",
           name: "orders",
