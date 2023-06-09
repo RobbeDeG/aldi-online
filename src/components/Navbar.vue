@@ -19,8 +19,12 @@
         <li class="nav-item">
           <router-link to="/about" class="nav-link" href="#">FAQ</router-link>
         </li>
+        <li class="nav-item">
+          <router-link to="/checkout" class="nav-link" href="#">Cart</router-link>
+        </li>
       </ul>
         <a class="btn btn-outline-success" data-toggle="modal" data-target="#login">LOGIN</a>
+        
     </div>
   </div>
     </nav>

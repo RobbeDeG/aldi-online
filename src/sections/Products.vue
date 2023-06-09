@@ -83,6 +83,7 @@
 </template>
 
 <script>
+
 export default {
   name: "Products",
   props: {

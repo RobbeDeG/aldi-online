@@ -7,6 +7,7 @@ import Products from "../views/Products.vue";
 import AdminProducts from "../views/AdminProducts.vue";
 import Orders from "../views/Orders.vue";
 import About from "../views/About.vue";
+import Checkout from "../views/Checkout.vue";
 
 import {fb, auth} from "../firebase";
 
@@ -30,7 +31,12 @@ const router =  new VueRouter({
       path: "/products",
       name: "products",
       component: Products
-  },
+    },
+    {
+      path: "/checkout",
+      name: "checkout",
+      component: Checkout
+    },
     {
       path: "/admin",
       name: "admin",
